@@ -27,6 +27,14 @@
                 <a class="nav-link" href="{% url 'ecommerce:index' %}">Link</a>
               </li>
             </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <a href="#" class="btn btn-warning">Login</a>
+              <a href="{% url 'ecommerce:cart' %}">
+                <img id="cart-icon" src="{% static 'src/images/cart.svg'%}"/>
+              </a>
+              <p id="cart-total">0</p>
+            </div>
+          </div>
       
         {% block content %}
         {% endblock %}
