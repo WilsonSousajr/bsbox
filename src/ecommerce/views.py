@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 
-# Create your views here.
+def index(request):
+    context = {}
+    return render(request, "src/index.html", context)
+
+def cart(request):
+    context = {}
+    return render(request, "src/cart.html", context)
+
+def checkout(request):
+    context = {}
+    return render(request, "src/checkout.html", context)
