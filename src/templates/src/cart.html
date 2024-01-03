@@ -37,7 +37,7 @@
                         <div style="flex:2">{{item.product.name}}</div>
                         <div style="flex:1">{{item.product.price|floatformat:2}}</div>
                         <div style="flex:1">
-                            <p class="quantity">1</p>
+                            <p class="quantity">x{{item.quantity}}</p>
                             <div class="quantity">
                                 <img class="chg-quantity" src="{% static 'src/images/arrowup.svg' %}"/>
                                 <img class="chg-quantity" src="{% static 'src/images/arrowdown.svg'%} "/>
