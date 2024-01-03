@@ -43,7 +43,7 @@
                                 <img class="chg-quantity" src="{% static 'src/images/arrowdown.svg'%} "/>
                             </div>
                         </div>
-                        <div style="flex:1">R$ 29,90</div>
+                        <div style="flex:1">R$ {{item.get_total}}</div>
                     </div>
                     {% endfor %}
                 </div>
