@@ -85,6 +85,8 @@
         document.querySelector("#payment-info").classList.remove("hidden")
     })
 
+    csrftoken = form.getElementsByTagName("input")[0].value
+    
     function submitFormData(){
         console.log("Payment button clicked")
     }
