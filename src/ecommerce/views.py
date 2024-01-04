@@ -15,7 +15,7 @@ def index(request):
         order = {'get_cart_total': 0, 'get_cart_items': 0}
         cartItems = order['get_cart_items']
     products = Product.objects.all()
-    context = {'products': products}
+    context = {'products': products, 'cartItems': cartItems}
     return render(request, "src/index.html", context)
 
 def cart(request):
