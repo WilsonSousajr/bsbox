@@ -68,4 +68,19 @@
             </div>
         </div>
     </div>
+<script type="text/javascript">
+    let shipping = '{{order.shipping}}'
+    
+    if(shipping == 'False'){
+        document.querySelector("#shipping-info").innerHTML = ''    
+    }
+
+    let form = document.querySelector("#form")
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        console.log("Form submited...")
+        document.querySelector("#form-button").classList.add("hidden")
+        document.querySelector("#payment-info").classList.remove("hidden")
+    })
+</script>
 {% endblock %}
