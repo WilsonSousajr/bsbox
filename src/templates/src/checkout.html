@@ -43,6 +43,7 @@
                 <br />
                 <div class="box-element hidden" id="payment-info">
                     <small>Paypal Options</small>
+                    <button id="make-payment">Make payment</button>
                 </div>
             </div>
 
@@ -82,5 +83,23 @@
         document.querySelector("#form-button").classList.add("hidden")
         document.querySelector("#payment-info").classList.remove("hidden")
     })
+
+    function submitFormData(){
+        console.log("Payment button clicked")
+    }
+    
+    document.querySelector("#make-payment").addEventListener('click', (e) => {
+        submitFormData()
+    })
+
+    if(user != 'AnonymousUser'){
+        document.querySelector("#user-info").innerHTML = ''
+    }
+
+    if (shipping == 'False' && user != 'AnonymousUser'){
+        document.querySelector("#form-wrapper").classList.add("hidden")
+        document.querySelector("#payment-info").classList.remove("hidden")
+    }
+
 </script>
 {% endblock %}
