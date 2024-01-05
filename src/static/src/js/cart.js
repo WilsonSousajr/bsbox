@@ -58,7 +58,7 @@ function createEventListener(item){
         console.log(`USER: ${user}`)
 
         if(user === 'AnonymousUser'){
-            console.log("User is not logged in.")
+            addCookieItem(productId, action)
         }
         else{
             updateUserOrder(productId, action)
