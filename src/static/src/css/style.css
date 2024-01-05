@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 nav a{
     text-decoration: none !important;
     color: white !important;
 }
 
 body{
-	background-color: hsl(0, 0%, 98%);
+	background-color: #F5F5F4;
 }
 
 h1,h2,h3,h4,h5,h6{
 	color:hsl(0, 0%, 30%);
+}
+
+#brand{
+	font-family: 'Poppins', sans-serif;
+}
+
+#navbar{
+	background-color: #1C1917 !important;
 }
 
 .box-element{
@@ -71,8 +81,6 @@ h1,h2,h3,h4,h5,h6{
 	display: inline-block;
 	font-weight: 700;
 	padding-right:10px;
-	
-
 }
 
 .chg-quantity{
