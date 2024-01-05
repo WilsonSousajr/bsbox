@@ -3,6 +3,7 @@ from .models import *
 from django.http import JsonResponse
 import json
 import datetime
+from .utils import cookieCart, cartData, guestOrder
 
 def index(request):
 
