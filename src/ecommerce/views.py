@@ -8,7 +8,7 @@ from .utils import cookieCart, cartData, guestOrder
 def index(request):
     data = cartData(request)
     cartItems = data['cartItems']
-
+    
     products = Product.objects.all()
     context = {'products': products, 'cartItems': cartItems}
     return render(request, "src/index.html", context)
