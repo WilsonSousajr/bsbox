@@ -51,26 +51,20 @@
     </script>
 </head>
 <body>
-      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand --bs-light-text-emphasis" href="{% url 'ecommerce:index' %}">BsBox</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-              </li>
-            </ul>
-            <div class="form-inline my-2 my-lg-0 d-flex align-items-center gap-3">
-              <a href="#" class="btn btn-warning">Login</a>
-              <a href="{% url 'ecommerce:cart' %}">
-                <img id="cart" src="{% static 'src/images/cart.svg'%}"/>
-              </a>
-              <span id="cart-total">{{cartItems}}</span>
-            </div>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" id="navbar">
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-brand --bs-light-text-emphasis" href="{% url 'ecommerce:index' %}" id="brand">
+          <img src="{% static 'src/images/icon.svg' %}" alt="Bootstrap" width="30" height="24">
+          BsBox
+        </a>
+        <div class="d-flex justify-content-end">
+          <div class="form-inline d-flex align-items-center gap-2">
+            <a href="{% url 'ecommerce:cart' %}">
+              <img id="cart" src="{% static 'src/images/cart.svg'%}"/>
+            </a>
+            <span id="cart-total">{{cartItems}}</span>
           </div>
+        </div>
           
       </nav>
       {% block content %}
