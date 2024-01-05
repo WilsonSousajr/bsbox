@@ -6,6 +6,8 @@ import datetime
 from .utils import cookieCart, cartData, guestOrder
 
 def index(request):
+    data = cartData(request)
+    cartItems = data['cartItems']
 
     if request.user.is_authenticated:
         customer = request.user.customer
