@@ -5,14 +5,15 @@
         <div class="row">
             {% for product in products %}
             <div class="col-lg-4">
-                <img class="thumbnail" src="{{product.imageURL}}">
-                <div class="box-element product">
-                    <h6><strong>{{product.name}}</strong></h6>
-                    <hr />
-                    <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
-                    <a class="btn btn-outline-success" ahref="">View</a>
-                    <h4 style="display: inline-block; float: right;"><strong>R${{product.price|floatformat:2}}</strong></h4>
-                </div>
+                <div class="card" style="width: 25rem;">
+                    <h4 class="card-header"><strong>R${{product.price|floatformat:2}}</strong></h4>
+                    <img class="card-img-top" src="{{product.imageURL}}">
+                    <div class="card-body">
+                        <h6 class="card-title"><strong>{{product.name}}</strong></h6>
+                        <hr />
+                        <button data-product="{{product.id}}" data-action="add" class="btn btn-success add-btn update-cart">Add to Cart</button>
+                    </div>    
+                </div>    
             </div>
             {% endfor %}
         </div>
