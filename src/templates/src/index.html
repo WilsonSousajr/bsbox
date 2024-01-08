@@ -1,0 +1,21 @@
+{% extends "src/base.html" %} {% block title %} Home {% endblock %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-lg-4">
+                <div class="card" style="width: 25rem;">
+                    <h4 class="card-header"><strong>R${{product.price|floatformat:2}}</strong></h4>
+                    <img class="card-img-top" src="{{product.imageURL}}">
+                    <div class="card-body">
+                        <h6 class="card-title"><strong>{{product.name}}</strong></h6>
+                        <hr />
+                        <button data-product="{{product.id}}" data-action="add" class="btn btn-success add-btn update-cart">Add to Cart</button>
+                    </div>    
+                </div>    
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
