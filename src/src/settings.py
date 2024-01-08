@@ -138,8 +138,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'URL': os.getenv('POSTGRES_URL'),
-        'NAME': os.getenv('PGNAME'),
+        'URL': os.getenv('DATABASE_URL'),
+        'NAME': os.getenv('PGDATABASE'),
         'USER': os.getenv('PGUSER'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
         'HOST': os.getenv('PGHOST'),
