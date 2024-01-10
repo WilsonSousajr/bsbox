@@ -11,7 +11,7 @@
 <h3 align="center">BsBox</h3>
 
   <p align="center">
-    An E-commerce project made with Django, Bootstrap and Jquery
+    An E-commerce project made with Django and Bootstrap.
     <br />
     <a href="https://github.com/WilsonSousajr/bsbox"><strong>Explore the docs »</strong></a>
     <br />
