@@ -113,7 +113,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Wilson Sousa - [@twitter_handle](https://twitter.com/_hotwills_) - email@email_client.com
+Wilson Sousa - [@__hotwills__](https://twitter.com/_hotwills_) - wstechnology.br@gmail.com
 
 Project Link: [https://github.com/WilsonSousajr/bsbox](https://github.com/WilsonSousajr/bsbox)
 
@@ -126,7 +126,7 @@ Project Link: [https://github.com/WilsonSousajr/bsbox](https://github.com/Wilson
 [license-shield]: https://img.shields.io/github/license/WilsonSousajr/bsbox.svg?style=for-the-badge
 [license-url]: https://github.com/WilsonSousajr/bsbox/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/www.linkedin.com/in/wilsonsousajúnior
 [product-screenshot]: docs/screenshots/home.jpeg
 [product-screenshot2]: docs/screenshots/cart.jpeg
 [product-screenshot3]: docs/screenshots/checkout.jpeg
