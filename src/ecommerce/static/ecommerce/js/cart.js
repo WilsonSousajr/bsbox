@@ -13,9 +13,8 @@ function updateCartUI() {
     });
 }
 
-function addCookieItem(productId, action){
-    console.log('User is not authenticated.')
 
+function addCookieItem(productId, action){
     if(action == 'add'){
         if(cart[productId] == undefined){
             cart[productId] = {'quantity': 1}
@@ -29,20 +28,15 @@ function addCookieItem(productId, action){
         cart[productId]['quantity'] -= 1
 
         if(cart[productId]['quantity'] <= 0){
-            console.log('Item should be deleted.')
             delete cart[productId]
         }
     }
 
-    console.log(`Cart: ${cart}`)
     document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
     updateCartUI()
 
 }
-
 function updateUserOrder(productId, action){
-    console.log('User is logged in, sending data...')
-
     let url = "/update_item/"
 
     fetch(url, {
@@ -65,10 +59,6 @@ function createEventListener(item){
     item.addEventListener('click', function(){
         let productId = this.dataset.product
         let action = this.dataset.action
-
-        console.log(`productId: ${productId}, action: ${action}`)
-        console.log(`USER: ${user}`)
-
         if(user === 'AnonymousUser'){
             addCookieItem(productId, action)
         }
@@ -77,7 +67,4 @@ function createEventListener(item){
         }
     })
 }
-
-
 updateButtons.forEach(createEventListener)
-
