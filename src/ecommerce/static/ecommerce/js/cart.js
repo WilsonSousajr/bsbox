@@ -1,5 +1,17 @@
 let updateButtons = document.querySelectorAll(".update-cart")
 
+function updateCartUI() {
+    $.ajax({
+        type: "GET",
+        url: "/cart/",
+        success: function (data) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(data, "text/html");
+            let cartTotal = $(doc).find("#cart-total").html();
+            $("#cart-total").html(cartTotal)
+        }
+    });
+}
 
 function addCookieItem(productId, action){
     console.log('User is not authenticated.')
