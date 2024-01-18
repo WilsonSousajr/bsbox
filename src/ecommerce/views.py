@@ -11,7 +11,7 @@ def index(request):
     
     products = Product.objects.all()
     context = {'products': products, 'cartItems': cartItems}
-    return render(request, "src/index.html", context)
+    return render(request, "ecommerce/index.html", context)
 
 def cart(request):
     data = cartData(request)
@@ -21,7 +21,7 @@ def cart(request):
     items = data['items']
 
     context = {'items':items, "order":order, 'cartItems': cartItems}
-    return render(request, "src/cart.html", context)
+    return render(request, "ecommerce/cart.html", context)
 
 def checkout(request):
     data = cartData(request)
@@ -31,7 +31,7 @@ def checkout(request):
     items = data['items']
 
     context = {'items':items, "order":order, 'cartItems': cartItems}
-    return render(request, "src/checkout.html", context)
+    return render(request, "ecommerce/checkout.html", context)
 
 def updateItem(request):
     data = json.loads(request.body)
