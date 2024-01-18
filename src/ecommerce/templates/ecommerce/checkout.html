@@ -79,7 +79,6 @@
     let form = document.querySelector("#form")
     form.addEventListener('submit', (e) => {
         e.preventDefault()
-        console.log("Form submited...")
         document.querySelector("#form-button").classList.add("hidden")
         document.querySelector("#payment-info").classList.remove("hidden")
     })
@@ -87,7 +86,6 @@
     csrftoken = form.getElementsByTagName("input")[0].value
     
     function submitFormData(){
-        console.log("Payment button clicked")
         let total = '{{order.get_cart_total}}'
     
         let userFormData = {
@@ -115,9 +113,6 @@
             userFormData.email = form.email.value
         }
     
-        console.log(`Shipping info: ${shippingInfo}`)
-        console.log(`User info: ${userFormData}`)
-
         let url = "/process_order/"
         fetch(url, {
             method: 'POST',
@@ -129,7 +124,6 @@
         })
         .then((response) => response.json())
         .then((data) => {
-            console.log(`Sucess: ${data}`)
             alert('Transaction completed')
 
             cart = {}
